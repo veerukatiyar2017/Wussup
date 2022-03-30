@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Medium.ttf">
+            <string>ProximaNova-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WUHomeRatingCollectionCell" id="gTV-IL-0wX" customClass="WUHomeRatingCollectionCell" customModule="Wussup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UWV-fJ-B9D">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MaskCollection" translatesAutoresizingMaskIntoConstraints="NO" id="POM-D7-B6s">
+                        <rect key="frame" x="0.0" y="85" width="240" height="85"/>
+                    </imageView>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rs-aT-mMd">
+                        <rect key="frame" x="192" y="10" width="38" height="24"/>
+                        <state key="normal" image="VideoIcon"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="buttonVideoAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="6S7-gx-63D"/>
+                        </connections>
+                    </button>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ex-t5-ZGP" customClass="DXStarRatingView">
+                        <rect key="frame" x="10" y="134" width="94" height="26"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="p8S-5Q-oat"/>
+                            <constraint firstAttribute="width" secondItem="0Ex-t5-ZGP" secondAttribute="height" multiplier="47:13" id="v5W-sp-8hb"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Grill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-Th-dl0">
+                        <rect key="frame" x="10" y="109" width="220" height="20"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gap-NW-sgX">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="23"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.26666666666666666" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="14"/>
+                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="10" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title=".252525Mi" image="DistanceIcon"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0Ex-t5-ZGP" secondAttribute="bottom" constant="10" id="1vg-cS-gQV"/>
+                <constraint firstItem="UWV-fJ-B9D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5u4-sV-zOq"/>
+                <constraint firstItem="POM-D7-B6s" firstAttribute="bottom" secondItem="UWV-fJ-B9D" secondAttribute="bottom" id="8RY-59-RPC"/>
+                <constraint firstAttribute="trailing" secondItem="fE5-Th-dl0" secondAttribute="trailing" constant="10" id="8vv-nA-rGE"/>
+                <constraint firstItem="0Ex-t5-ZGP" firstAttribute="top" secondItem="fE5-Th-dl0" secondAttribute="bottom" constant="5" id="AFD-rH-xrz"/>
+                <constraint firstItem="gap-NW-sgX" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="23:170" id="B10-So-UFr"/>
+                <constraint firstItem="UWV-fJ-B9D" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BZy-I3-87U"/>
+                <constraint firstItem="0rs-aT-mMd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Cx5-ib-kzu"/>
+                <constraint firstItem="0Ex-t5-ZGP" firstAttribute="leading" secondItem="fE5-Th-dl0" secondAttribute="leading" id="Fyk-se-PHh"/>
+                <constraint firstItem="POM-D7-B6s" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1:2" id="Mcw-Tj-tIU"/>
+                <constraint firstAttribute="bottom" secondItem="UWV-fJ-B9D" secondAttribute="bottom" id="Mmh-Tr-lSa"/>
+                <constraint firstItem="POM-D7-B6s" firstAttribute="trailing" secondItem="UWV-fJ-B9D" secondAttribute="trailing" id="Nk4-wd-i9j"/>
+                <constraint firstItem="gap-NW-sgX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UPN-om-AHb"/>
+                <constraint firstAttribute="trailing" secondItem="UWV-fJ-B9D" secondAttribute="trailing" id="ZSm-e8-M3f"/>
+                <constraint firstItem="gap-NW-sgX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eaB-7C-6hW"/>
+                <constraint firstItem="fE5-Th-dl0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="j7u-2y-LgT"/>
+                <constraint firstItem="POM-D7-B6s" firstAttribute="leading" secondItem="UWV-fJ-B9D" secondAttribute="leading" id="qgw-DS-QFa"/>
+                <constraint firstAttribute="trailing" secondItem="0rs-aT-mMd" secondAttribute="trailing" constant="10" id="vUG-SH-ZWC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="237" height="122"/>
+            <connections>
+                <outlet property="buttonDistance" destination="gap-NW-sgX" id="jDH-Nf-a5y"/>
+                <outlet property="buttonVideo" destination="0rs-aT-mMd" id="E8K-nj-I6K"/>
+                <outlet property="imageViewRating" destination="UWV-fJ-B9D" id="xcK-py-3hJ"/>
+                <outlet property="labelTitle" destination="fE5-Th-dl0" id="ueZ-hg-wuy"/>
+                <outlet property="viewStarRating" destination="0Ex-t5-ZGP" id="QpI-bq-KZO"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="83"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="DistanceIcon" width="17" height="16"/>
+        <image name="MaskCollection" width="240" height="100"/>
+        <image name="VideoIcon" width="38" height="24"/>
+        <image name="placeholder" width="135.5" height="93"/>
+    </resources>
+</document>

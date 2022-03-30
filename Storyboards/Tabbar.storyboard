@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pXq-dB-u2h">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tabbar View Controller-->
+        <scene sceneID="q6k-Hi-jhk">
+            <objects>
+                <tabBarController storyboardIdentifier="WUTabbarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pXq-dB-u2h" customClass="WUTabbarViewController" customModule="Wussup" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="MHo-NN-zVn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="buttonEvents" destination="LHz-KB-Nzo" id="HJD-GR-g0q"/>
+                        <outlet property="buttonFavorite" destination="jw7-Ut-aUP" id="yk6-Ls-xdx"/>
+                        <outlet property="buttonHome" destination="S2v-oi-4qY" id="6Hk-ZW-Wfl"/>
+                        <outlet property="buttonLiveCam" destination="qA2-oa-g8f" id="H78-U6-uYS"/>
+                        <outlet property="buttonNotificationCount" destination="ibi-W2-5pT" id="EgV-EQ-0hO"/>
+                        <outlet property="buttonProfile" destination="41f-4D-heg" id="zS9-ap-yiH"/>
+                        <outlet property="wuTabbarView" destination="q9c-aO-1ny" id="Wq8-w4-z4l"/>
+                        <segue destination="v1s-UX-cy3" kind="relationship" relationship="viewControllers" id="Mgr-19-XAa"/>
+                        <segue destination="pvp-FJ-859" kind="relationship" relationship="viewControllers" id="DgU-cC-lWW"/>
+                        <segue destination="1PV-uH-uam" kind="relationship" relationship="viewControllers" id="CUg-32-dds"/>
+                        <segue destination="LVG-do-UdM" kind="relationship" relationship="viewControllers" id="L00-fA-Vck"/>
+                        <segue destination="v9u-If-nRQ" kind="relationship" relationship="viewControllers" id="O7R-iv-kuW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4m-Os-yTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="q9c-aO-1ny">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-lN-1vx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hc-bF-pTp">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qA2-oa-g8f">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" image="TabLiveCam">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="TabLiveCamSelected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="tabbarButtonAction:" destination="pXq-dB-u2h" eventType="touchUpInside" id="oIh-1Y-VhX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="qA2-oa-g8f" firstAttribute="top" secondItem="0Hc-bF-pTp" secondAttribute="top" id="RSc-gl-MCa"/>
+                                        <constraint firstAttribute="trailing" secondItem="qA2-oa-g8f" secondAttribute="trailing" id="YC2-9o-s9O"/>
+                                        <constraint firstAttribute="bottom" secondItem="qA2-oa-g8f" secondAttribute="bottom" id="uf6-YT-U9s"/>
+                                        <constraint firstItem="qA2-oa-g8f" firstAttribute="leading" secondItem="0Hc-bF-pTp" secondAttribute="leading" id="z0S-X8-80q"/>
+                                    </constraints>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9y-UU-lcL">
+                                    <rect key="frame" x="75" y="0.0" width="75" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHz-KB-Nzo">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" image="TabEvents">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="TabEventsSelected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="LHz-KB-Nzo" secondAttribute="trailing" id="H9P-Q2-I3A"/>
+                                        <constraint firstItem="LHz-KB-Nzo" firstAttribute="top" secondItem="J9y-UU-lcL" secondAttribute="top" id="Qfk-I8-0fo"/>
+                                        <constraint firstAttribute="bottom" secondItem="LHz-KB-Nzo" secondAttribute="bottom" id="T79-sG-cA2"/>
+                                        <constraint firstItem="LHz-KB-Nzo" firstAttribute="leading" secondItem="J9y-UU-lcL" secondAttribute="leading" id="fIt-aN-z1w"/>
+                                    </constraints>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRU-hc-Ylj">
+                                    <rect key="frame" x="150" y="0.0" width="75" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2v-oi-4qY">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" image="TabHome">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="TabHomeSelected">
+                                                <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="S2v-oi-4qY" secondAttribute="bottom" id="1o2-fP-sxI"/>
+                                        <constraint firstItem="S2v-oi-4qY" firstAttribute="leading" secondItem="qRU-hc-Ylj" secondAttribute="leading" id="6Xp-wd-npH"/>
+                                        <constraint firstAttribute="trailing" secondItem="S2v-oi-4qY" secondAttribute="trailing" id="9VE-S7-VrY"/>
+                                        <constraint firstItem="S2v-oi-4qY" firstAttribute="top" secondItem="qRU-hc-Ylj" secondAttribute="top" id="xFR-Me-qau"/>
+                                    </constraints>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gca-zz-Jdp">
+                                    <rect key="frame" x="225" y="0.0" width="75" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw7-Ut-aUP">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" image="TabFavorites">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="TabFavoritesSelected">
+                                                <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibi-W2-5pT">
+                                            <rect key="frame" x="42.5" y="9" width="15" height="15"/>
+                                            <color key="backgroundColor" red="0.92549019607843142" green="0.11372549019607843" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ibi-W2-5pT" secondAttribute="height" id="8Xe-4W-w4u"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="11"/>
+                                            <state key="normal">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="propotionalCornerRadius">
+                                                    <real key="value" value="7.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jw7-Ut-aUP" secondAttribute="bottom" id="1ns-2L-1YM"/>
+                                        <constraint firstItem="jw7-Ut-aUP" firstAttribute="top" secondItem="Gca-zz-Jdp" secondAttribute="top" id="ADf-lA-YSy"/>
+                                        <constraint firstItem="ibi-W2-5pT" firstAttribute="width" secondItem="jw7-Ut-aUP" secondAttribute="width" multiplier="15:75" id="HPW-4f-eMy"/>
+                                        <constraint firstAttribute="trailing" secondItem="jw7-Ut-aUP" secondAttribute="trailing" id="HQH-Op-usJ"/>
+                                        <constraint firstItem="ibi-W2-5pT" firstAttribute="centerX" secondItem="jw7-Ut-aUP" secondAttribute="centerX" multiplier="50:37.5" id="QoE-zq-0wF"/>
+                                        <constraint firstItem="ibi-W2-5pT" firstAttribute="bottom" secondItem="jw7-Ut-aUP" secondAttribute="centerY" constant="-1" id="dB3-Bq-12c"/>
+                                        <constraint firstItem="jw7-Ut-aUP" firstAttribute="leading" secondItem="Gca-zz-Jdp" secondAttribute="leading" id="id5-lJ-Ye1"/>
+                                    </constraints>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWu-Qd-LZ7">
+                                    <rect key="frame" x="300" y="0.0" width="75" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41f-4D-heg">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" image="TabProfile">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="TabProfileSelected">
+                                                <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="41f-4D-heg" firstAttribute="leading" secondItem="dWu-Qd-LZ7" secondAttribute="leading" id="0OI-UM-eBt"/>
+                                        <constraint firstAttribute="trailing" secondItem="41f-4D-heg" secondAttribute="trailing" id="33O-6Q-tLr"/>
+                                        <constraint firstAttribute="bottom" secondItem="41f-4D-heg" secondAttribute="bottom" id="ODz-LR-Ry3"/>
+                                        <constraint firstItem="41f-4D-heg" firstAttribute="top" secondItem="dWu-Qd-LZ7" secondAttribute="top" id="kYZ-81-R4r"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="oxc-lN-1vx" firstAttribute="top" secondItem="cEM-iL-6HN" secondAttribute="top" id="B5h-6h-qbe"/>
+                        <constraint firstItem="oxc-lN-1vx" firstAttribute="trailing" secondItem="cEM-iL-6HN" secondAttribute="trailing" id="gRN-eI-Eix"/>
+                        <constraint firstItem="oxc-lN-1vx" firstAttribute="leading" secondItem="cEM-iL-6HN" secondAttribute="leading" id="trx-QS-6Dx"/>
+                        <constraint firstAttribute="bottom" secondItem="oxc-lN-1vx" secondAttribute="bottom" id="y6l-xy-uuI"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="cEM-iL-6HN"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-348" y="86"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="TGt-y8-lwC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="1PV-uH-uam" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="ieD-RW-EGj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Cf-rF-4IS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701" y="104"/>
+        </scene>
+        <!--LiveCam-->
+        <scene sceneID="6aJ-Si-Gyp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LiveCam" id="v1s-UX-cy3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="LiveCam" id="4rK-ui-U22"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBj-8Z-i1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="-91"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="Gdk-ul-AC3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" id="pvp-FJ-859" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" id="aNO-1s-63B"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t7-n3-SQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="31"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="bNa-RT-4Hk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorites" id="LVG-do-UdM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" id="czF-hI-I5s"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kA-f1-1ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="189"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="7Ry-du-OCN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="v9u-If-nRQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="exN-gV-qZg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLF-VK-iUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="340"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabEvents" width="30" height="27"/>
+        <image name="TabEventsSelected" width="30" height="26"/>
+        <image name="TabFavorites" width="35" height="32"/>
+        <image name="TabFavoritesSelected" width="35" height="33"/>
+        <image name="TabHome" width="46" height="27"/>
+        <image name="TabHomeSelected" width="46" height="28"/>
+        <image name="TabLiveCam" width="38" height="23"/>
+        <image name="TabLiveCamSelected" width="38" height="23"/>
+        <image name="TabProfile" width="28" height="28"/>
+        <image name="TabProfileSelected" width="28" height="28"/>
+    </resources>
+</document>

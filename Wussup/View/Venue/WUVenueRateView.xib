@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="WUVenueRateView" customModule="Wussup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1o-xf-81K" userLabel="ViewContainer">
+                    <rect key="frame" x="60" y="283" width="255" height="100"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9o-0B-2WB" userLabel="ViewLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="255" height="41"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIVE US A RATING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaD-eL-LUi">
+                                    <rect key="frame" x="42" y="10.5" width="172.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qaD-eL-LUi" firstAttribute="centerX" secondItem="f9o-0B-2WB" secondAttribute="centerX" id="4uq-XX-Dyl"/>
+                                <constraint firstAttribute="height" constant="41" id="l6P-dO-BEB"/>
+                                <constraint firstItem="qaD-eL-LUi" firstAttribute="centerY" secondItem="f9o-0B-2WB" secondAttribute="centerY" id="pVP-f3-AlL"/>
+                            </constraints>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeH-pJ-oSF" userLabel="ViewStar">
+                            <rect key="frame" x="0.0" y="41" width="255" height="59"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPo-fw-DPo">
+                                    <rect key="frame" x="3" y="33" width="23" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="vPo-fw-DPo" secondAttribute="height" multiplier="1:1" id="BhK-si-ld7"/>
+                                        <constraint firstAttribute="height" constant="23" id="PWo-eH-yCb"/>
+                                    </constraints>
+                                    <state key="normal" image="RateCloseIcon"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="buttonCancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="s3D-qg-48H"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PD-Ta-Gxe">
+                                    <rect key="frame" x="229" y="33" width="23" height="23"/>
+                                    <state key="normal" image="RateConfirmIcon"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="buttonConfirmAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="rqf-ZR-lpf"/>
+                                    </connections>
+                                </button>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-5o-hFQ" customClass="DXStarRatingView">
+                                    <rect key="frame" x="77.5" y="14.5" width="100" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="3np-Mk-cck"/>
+                                        <constraint firstAttribute="height" constant="30" id="Uh4-jB-dB1"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="PFC-5o-hFQ" firstAttribute="centerX" secondItem="zeH-pJ-oSF" secondAttribute="centerX" id="1GH-Ih-Ikf"/>
+                                <constraint firstItem="4PD-Ta-Gxe" firstAttribute="height" secondItem="vPo-fw-DPo" secondAttribute="height" id="J6p-GO-hBd"/>
+                                <constraint firstAttribute="bottom" secondItem="vPo-fw-DPo" secondAttribute="bottom" constant="3" id="RxZ-vu-Zqr"/>
+                                <constraint firstItem="4PD-Ta-Gxe" firstAttribute="width" secondItem="vPo-fw-DPo" secondAttribute="width" id="VhF-TW-slx"/>
+                                <constraint firstItem="vPo-fw-DPo" firstAttribute="leading" secondItem="zeH-pJ-oSF" secondAttribute="leading" constant="3" id="Vp0-Ue-dhK"/>
+                                <constraint firstAttribute="bottom" secondItem="4PD-Ta-Gxe" secondAttribute="bottom" constant="3" id="gTt-mO-967"/>
+                                <constraint firstItem="PFC-5o-hFQ" firstAttribute="centerY" secondItem="zeH-pJ-oSF" secondAttribute="centerY" id="vZk-gD-o9E"/>
+                                <constraint firstAttribute="trailing" secondItem="4PD-Ta-Gxe" secondAttribute="trailing" constant="3" id="yJK-1W-Ppj"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="f9o-0B-2WB" firstAttribute="top" secondItem="o1o-xf-81K" secondAttribute="top" id="0Nb-GM-7rj"/>
+                        <constraint firstAttribute="width" constant="255" id="1xB-a8-hxt"/>
+                        <constraint firstAttribute="bottom" secondItem="zeH-pJ-oSF" secondAttribute="bottom" id="8pE-Xn-g96"/>
+                        <constraint firstAttribute="trailing" secondItem="zeH-pJ-oSF" secondAttribute="trailing" id="NKY-Ze-dho"/>
+                        <constraint firstItem="zeH-pJ-oSF" firstAttribute="top" secondItem="f9o-0B-2WB" secondAttribute="bottom" id="OiH-xg-sqC"/>
+                        <constraint firstItem="zeH-pJ-oSF" firstAttribute="leading" secondItem="o1o-xf-81K" secondAttribute="leading" id="QBy-NS-sbN"/>
+                        <constraint firstAttribute="height" constant="100" id="Ute-vL-M4j"/>
+                        <constraint firstAttribute="trailing" secondItem="f9o-0B-2WB" secondAttribute="trailing" id="Xuh-gb-rgq"/>
+                        <constraint firstItem="f9o-0B-2WB" firstAttribute="leading" secondItem="o1o-xf-81K" secondAttribute="leading" id="jko-pl-FJD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="o1o-xf-81K" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4pf-lY-oWL"/>
+                <constraint firstItem="o1o-xf-81K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IBW-zz-8hy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="buttonCancel" destination="vPo-fw-DPo" id="f1u-qk-ULC"/>
+                <outlet property="buttonConfirm" destination="4PD-Ta-Gxe" id="iFx-kr-Dp7"/>
+                <outlet property="viewContainer" destination="o1o-xf-81K" id="o2e-2G-M8S"/>
+                <outlet property="viewLabel" destination="f9o-0B-2WB" id="ZFO-sn-cgV"/>
+                <outlet property="viewStar" destination="zeH-pJ-oSF" id="rZ4-jE-NdJ"/>
+                <outlet property="viewStarRating" destination="PFC-5o-hFQ" id="iHa-dI-Ega"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="RateCloseIcon" width="20" height="20"/>
+        <image name="RateConfirmIcon" width="19" height="20"/>
+    </resources>
+</document>

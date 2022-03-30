@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Medium.ttf">
+            <string>ProximaNova-Medium</string>
+        </array>
+        <array key="proxima-nova-regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WUEventPromoterTableCell" rowHeight="361" id="O0q-Vw-XXv" customClass="WUEventPromoterTableCell" customModule="Wussup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="361"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0q-Vw-XXv" id="220-uW-5rI">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="360.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="yBb-ue-SO0">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="83"/>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWV-nj-yMQ">
+                        <rect key="frame" x="12" y="83" width="328" height="28"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-PZ-hcb">
+                        <rect key="frame" x="12" y="111" width="328" height="198.5"/>
+                        <string key="text">how are youhow are youhow are youhow are youhow are youhow are youhow are youhow are youhow are youhow are how are youhow are youhow are youhow are youhow are youhow are youhow are youhow are youhow are youhow arehow are youhow are youhow are youhow are youhow are youhow are youhow are youhow are youhow are youhow are how are </string>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dot-2s-LQ4" userLabel="ViewSepartor">
+                        <rect key="frame" x="12" y="309.5" width="328" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1kh-NK-e5b"/>
+                        </constraints>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzJ-Pt-UU9" userLabel="ViewButtons">
+                        <rect key="frame" x="0.0" y="310.5" width="352" height="50"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuF-tQ-lo3">
+                                <rect key="frame" x="10" y="0.0" width="91" height="50"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="10" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="SHARE" image="ShareIcon">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.50588235290000005" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonShareAction:" destination="O0q-Vw-XXv" eventType="touchUpInside" id="D9a-Na-2Ui"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnV-HR-jdZ">
+                                <rect key="frame" x="106" y="-0.5" width="139" height="50"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                <state key="normal" title="ADD TO CALENDAR " image="AddToCalendarIcon">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.50588235290000005" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonAddToCalendarAction:" destination="O0q-Vw-XXv" eventType="touchUpInside" id="yLJ-N3-6dg"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzx-Yw-PdA">
+                                <rect key="frame" x="251" y="-0.5" width="91" height="50"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="CLOSE" image="UpArrowIcon">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonCloseAction:" destination="O0q-Vw-XXv" eventType="touchUpInside" id="ClW-m6-N1a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZuF-tQ-lo3" secondAttribute="bottom" id="8WC-uF-krc"/>
+                            <constraint firstItem="ZuF-tQ-lo3" firstAttribute="top" secondItem="pzJ-Pt-UU9" secondAttribute="top" id="GoC-dI-Dp7"/>
+                            <constraint firstItem="jzx-Yw-PdA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hnV-HR-jdZ" secondAttribute="trailing" constant="5" id="Rdb-WL-V70"/>
+                            <constraint firstAttribute="height" constant="50" id="VFp-Ct-irM"/>
+                            <constraint firstItem="ZuF-tQ-lo3" firstAttribute="width" secondItem="jzx-Yw-PdA" secondAttribute="width" id="W4f-OJ-d5W"/>
+                            <constraint firstItem="hnV-HR-jdZ" firstAttribute="bottom" secondItem="ZuF-tQ-lo3" secondAttribute="bottom" id="Xcf-16-7n6"/>
+                            <constraint firstItem="jzx-Yw-PdA" firstAttribute="bottom" secondItem="ZuF-tQ-lo3" secondAttribute="bottom" id="aRb-NZ-wOs"/>
+                            <constraint firstItem="jzx-Yw-PdA" firstAttribute="top" secondItem="ZuF-tQ-lo3" secondAttribute="top" id="ezw-6G-Q1V"/>
+                            <constraint firstItem="hnV-HR-jdZ" firstAttribute="centerX" secondItem="pzJ-Pt-UU9" secondAttribute="centerX" id="gB7-We-i18"/>
+                            <constraint firstAttribute="trailing" secondItem="jzx-Yw-PdA" secondAttribute="trailing" constant="10" id="qwf-hU-e7F"/>
+                            <constraint firstItem="hnV-HR-jdZ" firstAttribute="top" secondItem="ZuF-tQ-lo3" secondAttribute="top" id="tYH-bP-F0y"/>
+                            <constraint firstItem="hnV-HR-jdZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZuF-tQ-lo3" secondAttribute="trailing" constant="5" id="whX-Sn-50x"/>
+                            <constraint firstItem="ZuF-tQ-lo3" firstAttribute="leading" secondItem="pzJ-Pt-UU9" secondAttribute="leading" constant="10" id="xdd-Id-rbr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="7pe-PZ-hcb" firstAttribute="leading" secondItem="sWV-nj-yMQ" secondAttribute="leading" id="5Ar-Q7-pjg"/>
+                    <constraint firstItem="Dot-2s-LQ4" firstAttribute="top" secondItem="7pe-PZ-hcb" secondAttribute="bottom" id="6hX-uP-d2c"/>
+                    <constraint firstAttribute="trailing" secondItem="pzJ-Pt-UU9" secondAttribute="trailing" id="HaB-pC-C7s"/>
+                    <constraint firstItem="pzJ-Pt-UU9" firstAttribute="top" secondItem="Dot-2s-LQ4" secondAttribute="bottom" id="IDn-Ml-N70"/>
+                    <constraint firstItem="yBb-ue-SO0" firstAttribute="leading" secondItem="220-uW-5rI" secondAttribute="leading" id="Iwa-CV-XVc"/>
+                    <constraint firstItem="sWV-nj-yMQ" firstAttribute="leading" secondItem="220-uW-5rI" secondAttribute="leading" constant="12" id="J9V-pK-nG7"/>
+                    <constraint firstItem="7pe-PZ-hcb" firstAttribute="top" secondItem="sWV-nj-yMQ" secondAttribute="bottom" id="PiA-Xs-WCy"/>
+                    <constraint firstAttribute="trailing" secondItem="sWV-nj-yMQ" secondAttribute="trailing" constant="12" id="QcH-Mf-IYm"/>
+                    <constraint firstItem="sWV-nj-yMQ" firstAttribute="top" secondItem="yBb-ue-SO0" secondAttribute="bottom" id="Tdl-aB-j94"/>
+                    <constraint firstAttribute="bottom" secondItem="pzJ-Pt-UU9" secondAttribute="bottom" id="Wdh-Ss-YEB"/>
+                    <constraint firstItem="yBb-ue-SO0" firstAttribute="top" secondItem="220-uW-5rI" secondAttribute="top" id="Y1X-CU-qOZ"/>
+                    <constraint firstItem="Dot-2s-LQ4" firstAttribute="trailing" secondItem="sWV-nj-yMQ" secondAttribute="trailing" id="ZBB-Kg-Sts"/>
+                    <constraint firstItem="7pe-PZ-hcb" firstAttribute="trailing" secondItem="sWV-nj-yMQ" secondAttribute="trailing" id="aKr-0j-AsP"/>
+                    <constraint firstItem="Dot-2s-LQ4" firstAttribute="leading" secondItem="sWV-nj-yMQ" secondAttribute="leading" id="jWl-de-kUR"/>
+                    <constraint firstItem="pzJ-Pt-UU9" firstAttribute="leading" secondItem="220-uW-5rI" secondAttribute="leading" id="qyD-oC-Hqg"/>
+                    <constraint firstAttribute="trailing" secondItem="yBb-ue-SO0" secondAttribute="trailing" id="uOh-3g-whP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="7Pi-fS-E1a"/>
+            <connections>
+                <outlet property="buttonAddToCalendar" destination="hnV-HR-jdZ" id="dOa-CC-Wq2"/>
+                <outlet property="buttonClose" destination="jzx-Yw-PdA" id="kRs-tb-ptO"/>
+                <outlet property="buttonShare" destination="ZuF-tQ-lo3" id="rkC-Mw-jwG"/>
+                <outlet property="cnstlabelDescriptionBottom" destination="6hX-uP-d2c" id="pTO-ec-cKe"/>
+                <outlet property="cnstlabelTitleBottom" destination="PiA-Xs-WCy" id="XGr-AJ-ASW"/>
+                <outlet property="cnstlabelTitleTop" destination="Tdl-aB-j94" id="KkQ-Cr-Vho"/>
+                <outlet property="imageViewPromoter" destination="yBb-ue-SO0" id="GAG-pc-x1U"/>
+                <outlet property="labelDescription" destination="7pe-PZ-hcb" id="vPA-Us-PrE"/>
+                <outlet property="labelTitle" destination="sWV-nj-yMQ" id="CEt-HO-k1D"/>
+                <outlet property="viewButton" destination="pzJ-Pt-UU9" id="zkm-mo-i4P"/>
+                <outlet property="viewButtonHeight" destination="VFp-Ct-irM" id="dAV-4x-1vq"/>
+                <outlet property="viewSeparatorHeight" destination="1kh-NK-e5b" id="S1H-l8-31j"/>
+            </connections>
+            <point key="canvasLocation" x="-262" y="-277.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AddToCalendarIcon" width="24" height="27"/>
+        <image name="ShareIcon" width="28" height="22"/>
+        <image name="UpArrowIcon" width="18" height="12"/>
+        <image name="placeholder" width="135" height="93"/>
+    </resources>
+</document>

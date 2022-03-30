@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="ProximaNova-Medium.ttf">
+            <string>ProximaNova-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-mJ-qfu">
+                    <rect key="frame" x="55" y="25" width="315" height="15"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD6-Ec-pqq">
+                    <rect key="frame" x="55" y="45" width="315" height="34"/>
+                    <string key="text">Label
+Hello</string>
+                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WussUpIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fmE-A1-wgI">
+                    <rect key="frame" x="10" y="25" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fmE-A1-wgI" secondAttribute="height" multiplier="1:1" id="Srt-ZK-hzv"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="150" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUF-Jc-2Ot">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                    <state key="highlighted" backgroundImage="bluebar"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fmE-A1-wgI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="40:375" id="FYR-Um-UP1"/>
+                <constraint firstItem="fmE-A1-wgI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="HEL-5p-Yxw"/>
+                <constraint firstItem="vg5-mJ-qfu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="I01-i5-ecn"/>
+                <constraint firstItem="fmE-A1-wgI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="MUH-0g-vmq"/>
+                <constraint firstItem="vg5-mJ-qfu" firstAttribute="leading" secondItem="fmE-A1-wgI" secondAttribute="trailing" constant="5" id="XEX-sW-rWq"/>
+                <constraint firstItem="AD6-Ec-pqq" firstAttribute="trailing" secondItem="vg5-mJ-qfu" secondAttribute="trailing" id="ZD4-sr-X5C"/>
+                <constraint firstItem="qUF-Jc-2Ot" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e2G-NU-lZ6"/>
+                <constraint firstItem="qUF-Jc-2Ot" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jQC-Fi-m49"/>
+                <constraint firstAttribute="trailing" secondItem="vg5-mJ-qfu" secondAttribute="trailing" constant="5" id="o2o-dP-So5"/>
+                <constraint firstAttribute="trailing" secondItem="qUF-Jc-2Ot" secondAttribute="trailing" id="puq-XK-dWe"/>
+                <constraint firstAttribute="bottom" secondItem="qUF-Jc-2Ot" secondAttribute="bottom" id="qwd-OE-bgh"/>
+                <constraint firstItem="AD6-Ec-pqq" firstAttribute="leading" secondItem="vg5-mJ-qfu" secondAttribute="leading" id="t9s-HF-qzG"/>
+                <constraint firstItem="AD6-Ec-pqq" firstAttribute="top" secondItem="vg5-mJ-qfu" secondAttribute="bottom" constant="5" id="yzc-hn-TeG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="436.5" y="327"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="WussUpIcon" width="130" height="129"/>
+        <image name="bluebar" width="170" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Medium.ttf">
+            <string>ProximaNova-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WUAttendEventView" customModule="Wussup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WOULD YOU LIKE TO ATTEND THIS EVENT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gX-HS-1SR">
+                    <rect key="frame" x="12.5" y="0.0" width="350.5" height="14"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-4O-M8b">
+                    <rect key="frame" x="55" y="29" width="125" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="SBW-hR-8xh"/>
+                        <constraint firstAttribute="height" constant="40" id="WI9-ID-IVN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="16"/>
+                    <state key="normal" title="YES">
+                        <color key="titleColor" red="1" green="0.792156862745098" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buttonYesAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Fk-DJ-0RV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flt-tr-lfS">
+                    <rect key="frame" x="193.5" y="29" width="125" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="16"/>
+                    <state key="normal" title="MAYBE">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buttonMayBeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="BoG-iQ-c33"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vio-VO-l3w" userLabel="ViewSeparator">
+                    <rect key="frame" x="0.0" y="109" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="JiN-PT-vgz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="flt-tr-lfS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="193.5:187.5" id="0QV-9J-aoj"/>
+                <constraint firstItem="6MI-4O-M8b" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="180:187.5" id="269-0b-AGh"/>
+                <constraint firstItem="flt-tr-lfS" firstAttribute="top" secondItem="6MI-4O-M8b" secondAttribute="top" id="2BS-c0-gIu"/>
+                <constraint firstItem="3gX-HS-1SR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hr9-0T-Agy"/>
+                <constraint firstAttribute="bottom" secondItem="Vio-VO-l3w" secondAttribute="bottom" id="JId-06-oCW"/>
+                <constraint firstItem="3gX-HS-1SR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="PZy-Io-Ta4"/>
+                <constraint firstItem="Vio-VO-l3w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TjW-2L-Pih"/>
+                <constraint firstItem="flt-tr-lfS" firstAttribute="width" secondItem="6MI-4O-M8b" secondAttribute="width" id="aIL-UM-hQF"/>
+                <constraint firstItem="flt-tr-lfS" firstAttribute="bottom" secondItem="6MI-4O-M8b" secondAttribute="bottom" id="hNr-dY-dmc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3gX-HS-1SR" secondAttribute="trailing" constant="12" id="hfD-tn-Axt"/>
+                <constraint firstItem="6MI-4O-M8b" firstAttribute="top" secondItem="3gX-HS-1SR" secondAttribute="bottom" constant="15" id="hls-DD-hTw"/>
+                <constraint firstItem="flt-tr-lfS" firstAttribute="height" secondItem="6MI-4O-M8b" secondAttribute="height" id="tfi-x6-CUI"/>
+                <constraint firstAttribute="trailing" secondItem="Vio-VO-l3w" secondAttribute="trailing" id="z5g-Eo-Qd0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="80.5" y="313"/>
+        </view>
+    </objects>
+</document>

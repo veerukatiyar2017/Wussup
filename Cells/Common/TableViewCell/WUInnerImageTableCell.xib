@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Medium.ttf">
+            <string>ProximaNova-Medium</string>
+        </array>
+        <array key="proxima-nova-regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WUInnerImageTableCell" rowHeight="220" id="y6O-Dh-cez" customClass="WUInnerImageTableCell" customModule="Wussup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6O-Dh-cez" id="TMG-mr-Rjz">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-gQ-bVz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="n1g-CK-BQg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="n1g-CK-BQg" secondAttribute="trailing" id="Mbg-to-fo6"/>
+                            <constraint firstItem="n1g-CK-BQg" firstAttribute="top" secondItem="JsF-gQ-bVz" secondAttribute="top" id="YB9-9i-K1F"/>
+                            <constraint firstItem="n1g-CK-BQg" firstAttribute="leading" secondItem="JsF-gQ-bVz" secondAttribute="leading" id="p8g-4z-hvY"/>
+                            <constraint firstAttribute="bottom" secondItem="n1g-CK-BQg" secondAttribute="bottom" id="yXZ-9x-EzW"/>
+                        </constraints>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPp-Eq-L5x" userLabel="ViewButtons">
+                        <rect key="frame" x="0.0" y="169.5" width="375" height="50"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rom-4Q-oYW">
+                                <rect key="frame" x="10" y="0.0" width="81" height="50"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="10" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="SHARE" image="ShareIcon">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.50588235290000005" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonShareAction:" destination="y6O-Dh-cez" eventType="touchUpInside" id="mxg-9h-OtO"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wak-Qf-jaw">
+                                <rect key="frame" x="284" y="0.0" width="81" height="50"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="CLOSE" image="UpArrowIcon">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonCloseAction:" destination="y6O-Dh-cez" eventType="touchUpInside" id="ycc-1p-pXV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-9p-d2z">
+                                <rect key="frame" x="117.5" y="0.0" width="140" height="50"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="ADD TO CALENDAR " image="AddToCalendarIcon">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.50588235290000005" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonAddToCalendarAction:" destination="y6O-Dh-cez" eventType="touchUpInside" id="NSg-5s-ne0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rom-4Q-oYW" firstAttribute="top" secondItem="SPp-Eq-L5x" secondAttribute="top" id="4ZB-m2-oel"/>
+                            <constraint firstItem="rom-4Q-oYW" firstAttribute="leading" secondItem="SPp-Eq-L5x" secondAttribute="leading" constant="10" id="DcI-FI-tMP"/>
+                            <constraint firstAttribute="bottom" secondItem="rom-4Q-oYW" secondAttribute="bottom" id="Hh5-fo-0Y9"/>
+                            <constraint firstItem="cJR-9p-d2z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rom-4Q-oYW" secondAttribute="trailing" constant="5" id="HzE-TD-0Hu"/>
+                            <constraint firstAttribute="height" constant="50" id="JUb-nr-DS2"/>
+                            <constraint firstItem="rom-4Q-oYW" firstAttribute="width" secondItem="wak-Qf-jaw" secondAttribute="width" id="Omh-vi-uRJ"/>
+                            <constraint firstItem="cJR-9p-d2z" firstAttribute="bottom" secondItem="rom-4Q-oYW" secondAttribute="bottom" id="PR2-UA-gbd"/>
+                            <constraint firstItem="cJR-9p-d2z" firstAttribute="centerX" secondItem="SPp-Eq-L5x" secondAttribute="centerX" id="aIa-uy-ERp"/>
+                            <constraint firstItem="wak-Qf-jaw" firstAttribute="top" secondItem="rom-4Q-oYW" secondAttribute="top" id="bnk-Cy-KNg"/>
+                            <constraint firstItem="cJR-9p-d2z" firstAttribute="top" secondItem="rom-4Q-oYW" secondAttribute="top" id="c4y-l8-Ecp"/>
+                            <constraint firstItem="wak-Qf-jaw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cJR-9p-d2z" secondAttribute="trailing" constant="5" id="k7R-Kl-OML"/>
+                            <constraint firstAttribute="trailing" secondItem="wak-Qf-jaw" secondAttribute="trailing" constant="10" id="oV7-8I-kkb"/>
+                            <constraint firstItem="wak-Qf-jaw" firstAttribute="bottom" secondItem="rom-4Q-oYW" secondAttribute="bottom" id="rry-2i-KlY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SPp-Eq-L5x" firstAttribute="leading" secondItem="TMG-mr-Rjz" secondAttribute="leading" id="H3p-gO-OUp"/>
+                    <constraint firstAttribute="trailing" secondItem="JsF-gQ-bVz" secondAttribute="trailing" id="LRK-Of-a3s"/>
+                    <constraint firstAttribute="trailing" secondItem="SPp-Eq-L5x" secondAttribute="trailing" id="XrO-DY-pNx"/>
+                    <constraint firstItem="SPp-Eq-L5x" firstAttribute="top" secondItem="JsF-gQ-bVz" secondAttribute="bottom" id="dVI-Ua-aQe"/>
+                    <constraint firstItem="JsF-gQ-bVz" firstAttribute="top" secondItem="TMG-mr-Rjz" secondAttribute="top" id="hbU-8M-INB"/>
+                    <constraint firstItem="JsF-gQ-bVz" firstAttribute="leading" secondItem="TMG-mr-Rjz" secondAttribute="leading" id="inf-uT-sli"/>
+                    <constraint firstAttribute="bottom" secondItem="SPp-Eq-L5x" secondAttribute="bottom" id="kVU-HE-CUe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonAddToCalendar" destination="cJR-9p-d2z" id="csX-Uo-fiZ"/>
+                <outlet property="buttonClose" destination="wak-Qf-jaw" id="7xn-ez-k9l"/>
+                <outlet property="buttonShare" destination="rom-4Q-oYW" id="Uos-Iv-ClT"/>
+                <outlet property="imageViewCell" destination="n1g-CK-BQg" id="lFa-BL-SZA"/>
+                <outlet property="viewButtonHeight" destination="JUb-nr-DS2" id="xgk-Lo-eRH"/>
+            </connections>
+            <point key="canvasLocation" x="18" y="-17"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AddToCalendarIcon" width="24" height="27"/>
+        <image name="ShareIcon" width="28" height="22"/>
+        <image name="UpArrowIcon" width="18" height="12"/>
+        <image name="placeholder" width="135" height="93"/>
+    </resources>
+</document>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Medium.ttf">
+            <string>ProximaNova-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WUHomeTitleCollectionCell" id="gTV-IL-0wX" customClass="WUHomeTitleCollectionCell" customModule="Wussup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-os-ddL">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MaskCollection" translatesAutoresizingMaskIntoConstraints="NO" id="Dgs-m5-mpO">
+                        <rect key="frame" x="0.0" y="85" width="240" height="85"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oT-dY-Tzf">
+                        <rect key="frame" x="0.0" y="0.0" width="67" height="20"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.2666666667" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="14"/>
+                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="10" maxY="0.0"/>
+                        <state key="normal" title=".25Mi" image="DistanceIcon"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8de-34-cWK">
+                        <rect key="frame" x="192" y="10" width="38" height="24"/>
+                        <state key="normal" image="VideoIcon"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="buttonVideoAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Hnq-uM-jom"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnny reno at the Grand Sierra" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9p-c7-7MD">
+                        <rect key="frame" x="10" y="120" width="220" height="40"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPropotional" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5oT-dY-Tzf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0i0-gq-QAz"/>
+                <constraint firstItem="Dgs-m5-mpO" firstAttribute="leading" secondItem="9d8-os-ddL" secondAttribute="leading" id="1T8-AB-e8X"/>
+                <constraint firstItem="Dgs-m5-mpO" firstAttribute="height" secondItem="9d8-os-ddL" secondAttribute="height" multiplier="1:2" id="8Hi-Y3-ggK"/>
+                <constraint firstAttribute="bottom" secondItem="C9p-c7-7MD" secondAttribute="bottom" constant="10" id="BEy-nJ-2uI"/>
+                <constraint firstItem="9d8-os-ddL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H7F-0k-934"/>
+                <constraint firstItem="9d8-os-ddL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HR5-Kr-umJ"/>
+                <constraint firstAttribute="trailing" secondItem="C9p-c7-7MD" secondAttribute="trailing" constant="10" id="RaB-aP-sbq"/>
+                <constraint firstItem="C9p-c7-7MD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9d8-os-ddL" secondAttribute="top" constant="20" id="Un5-am-Ohi"/>
+                <constraint firstItem="C9p-c7-7MD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="WFG-MA-bJ2"/>
+                <constraint firstItem="Dgs-m5-mpO" firstAttribute="trailing" secondItem="9d8-os-ddL" secondAttribute="trailing" id="WbZ-70-bHe"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="8de-34-cWK" secondAttribute="trailing" constant="10" id="Yop-9H-mCy"/>
+                <constraint firstAttribute="bottom" secondItem="9d8-os-ddL" secondAttribute="bottom" id="ZER-yb-hiU"/>
+                <constraint firstItem="5oT-dY-Tzf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZuH-U7-7By"/>
+                <constraint firstAttribute="trailing" secondItem="9d8-os-ddL" secondAttribute="trailing" id="b1v-Nn-GaK"/>
+                <constraint firstItem="8de-34-cWK" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="10" id="bU4-5Z-UHe"/>
+                <constraint firstItem="5oT-dY-Tzf" firstAttribute="height" secondItem="9d8-os-ddL" secondAttribute="height" multiplier="20:170" id="dwM-HJ-RgO"/>
+                <constraint firstItem="Dgs-m5-mpO" firstAttribute="bottom" secondItem="9d8-os-ddL" secondAttribute="bottom" id="jPe-vB-7Gi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="214" height="180"/>
+            <connections>
+                <outlet property="buttonDistance" destination="5oT-dY-Tzf" id="Kzk-vg-bLe"/>
+                <outlet property="buttonVideo" destination="8de-34-cWK" id="cQH-rt-ka0"/>
+                <outlet property="imageViewTitle" destination="9d8-os-ddL" id="imp-HF-AmT"/>
+                <outlet property="labelTitle" destination="C9p-c7-7MD" id="9kD-gL-hCS"/>
+            </connections>
+            <point key="canvasLocation" x="107" y="117"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="DistanceIcon" width="17" height="16"/>
+        <image name="MaskCollection" width="240" height="100"/>
+        <image name="VideoIcon" width="38" height="24"/>
+        <image name="placeholder" width="135" height="93"/>
+    </resources>
+</document>
