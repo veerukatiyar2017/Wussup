@@ -56,6 +56,10 @@ class WUCategoryCollectionCell: UICollectionViewCell {
     //MARK: - Initial Interface SetUp
     
     func setInterestDetails(infoArray: [String:Any]) {
+
+        if let name = infoArray["Name"] as? String {
+            self.labelCategory.text = name
+        }
         if infoArray["IsCategorySelected"] as? Int == 1 {
             self.imageViewCategory.sd_imageIndicator = SDWebImageActivityIndicator.white
             if let imageURL = infoArray["SelectedImageURL"] as? String {
@@ -66,10 +70,6 @@ class WUCategoryCollectionCell: UICollectionViewCell {
             if let imageURL = infoArray["UnSelectedImageURL"] as? String {
             self.imageViewCategory.sd_setImage(with:URL(string:imageURL), placeholderImage: UIImage(named:"placeholder.png" ))
             }
-        }
-        if let name = infoArray["Name"] as? String {
-            self.labelCategory.text = name
-            self.labelCategory.textColor =  UIColor.white
         }
     }
     

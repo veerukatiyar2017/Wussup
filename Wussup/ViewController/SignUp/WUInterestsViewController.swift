@@ -32,6 +32,7 @@ class WUInterestsViewController: UIViewController {
     var db = Firestore.firestore()
     var interestCategoriesArray = [[String: Any]]()
     var selectedArray = [String]()
+    
     //MARK:- Lifecycle Methods
     
     override func viewDidLoad() {
@@ -117,7 +118,6 @@ class WUInterestsViewController: UIViewController {
 //          let value = snapshot.value as? NSDictionary
 //          let username = value?["Name"] as? String ?? ""
 //          print(username)
-//
 //          // ...
 //        }) { error in
 //          print(error.localizedDescription)
@@ -266,9 +266,11 @@ extension WUInterestsViewController : UICollectionViewDelegate,UICollectionViewD
             .document(userid!)
             .updateData([
                 "favoriteCategories": selectedArray
+                
             ])
  //       if let selectedCategory = categoryObject["IsCategorySelected"] as? Int, selectedCategory == 0 {
         let cell = collectionView.cellForItem(at: indexPath) as! WUCategoryCollectionCell
+        cell.labelCategory.textColor = UIColor.black
         cell.setInterestDetails(infoArray: self.interestCategoriesArray[indexPath.item])
     //    }
 //        cell.setCategory = categoryObject

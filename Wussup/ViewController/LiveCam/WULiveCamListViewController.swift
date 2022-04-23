@@ -18,12 +18,18 @@ class WULiveCamListViewController: UIViewController {
     //MARK: - Variable
     var verticalContentOffset : CGFloat!
     weak var delegate : WULiveCamAnimationDelagate?
-    var arrFilteredLiveCamList : [WUVenueLiveCams] = []
-    var arrLiveCamList         : [WUVenueLiveCams] = [] {
-        didSet{
+ //   var arrFilteredLiveCamList : [WUVenueLiveCams] = []
+    var arrFilteredLiveCamList :[[String: Any]] = []
+    var arrLiveCamList              : [[String: Any]] = [] {
+        didSet {
             self.prepareFilterArrayLiveCamList(searchText: "")
         }
     }
+//    var arrLiveCamList         : [WUVenueLiveCams] = [] {
+//        didSet{
+//            self.prepareFilterArrayLiveCamList(searchText: "")
+//        }
+//    }
     
     //MARK: - Load Methods
     override func viewDidLoad() {
@@ -72,14 +78,14 @@ class WULiveCamListViewController: UIViewController {
     }
     
     func prepareFilterArrayLiveCamList(searchText : String){
-        self.arrFilteredLiveCamList = self.arrLiveCamList.clone()
-        
+       // self.arrFilteredLiveCamList = self.arrLiveCamList.clone()
+        self.arrFilteredLiveCamList = self.arrLiveCamList
         self.buttonGoToTop.isHidden = true
         self.buttonGoToTop.isSelected = false
         
         if searchText != ""{
-            let filteredLiveCam  = self.arrFilteredLiveCamList.filter { $0.Name.containsIgnoringCase(find: searchText)}
-            self.arrFilteredLiveCamList = filteredLiveCam
+//            let filteredLiveCam  = self.arrFilteredLiveCamList.filter { $0.Name.containsIgnoringCase(find: searchText)}
+//            self.arrFilteredLiveCamList = filteredLiveCam
         }
         self.manageNoResultLabel()
     }
@@ -125,7 +131,7 @@ extension WULiveCamListViewController : UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.verticalContentOffset  = self.tableViewLiveCamList.contentOffset.y
-        Utill.goToLivecamProfile(viewController: self, withLivecamM: self.arrFilteredLiveCamList[indexPath.row])
+    //    Utill.goToLivecamProfile(viewController: self, withLivecamM: self.arrFilteredLiveCamList[indexPath.row])
         
         /*  if let vc : WUPlayLiveCamViewController = UIStoryboard.home.get(WUPlayLiveCamViewController.self){
          vc.hidesBottomBarWhenPushed = true

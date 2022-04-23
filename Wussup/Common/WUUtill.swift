@@ -496,6 +496,21 @@ class WUUtill: NSObject {
         }
     }
     
+//    class func goToLivecamProfile(viewController : UIViewController,withLivecamM livecamM : [String: Any])
+//    {
+//        if let vc : WULiveCamProfileViewController = UIStoryboard.liveCam.get(WULiveCamProfileViewController.self){
+//            vc.hidesBottomBarWhenPushed = true
+//            vc.liveCamVenue = livecamM
+//            if (Utill.getHomeBannerModel()?.count)! > 1{
+//                vc.arrayBannerList = (Utill.getHomeBannerModel()?.repeated(count: sliderRepeatCount))!
+//            }else {
+//                vc.arrayBannerList = Utill.getHomeBannerModel()!
+//            }
+//            viewController.navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
+    
+    
     class func goToClaimBussinessScreenWithVenue(viewController : UIViewController , venue : Any) {
 //        self.verticalContentOffset  = self.tableViewHome.contentOffset.y
         if let vc = UIStoryboard.home.get(WUClaimABusinessDetailViewController.self){//get(WUClaimABusinessPromptViewController.self){

@@ -25,13 +25,20 @@ class WULiveCamGridViewController: UIViewController {
     var verticalContentOffset   : CGFloat!
     var tapGesture              = UITapGestureRecognizer()
     weak var delegate           : WULiveCamAnimationDelagate?
-    private var arrCollectionDataCopy : [WUVenueLiveCams] = []
-    var arrFilteredLiveCamList : [WUVenueLiveCams] = []
-    var arrLiveCamList         : [WUVenueLiveCams] = [] {
-        didSet{
+//    private var arrCollectionDataCopy : [WUVenueLiveCams] = []
+    private var arrCollectionDataCopy : [[String: Any]] = []
+ //   var arrFilteredLiveCamList : [WUVenueLiveCams] = []
+    var arrFilteredLiveCamList              : [[String: Any]] = []
+    var arrLiveCamList              : [[String: Any]] = [] {
+        didSet {
             self.prepareFilterArrayLiveCamList(searchText: "")
         }
     }
+//    var arrLiveCamList         : [WUVenueLiveCams] = [] {
+//        didSet{
+//            self.prepareFilterArrayLiveCamList(searchText: "")
+//        }
+//    }
     
     //MARK: - Load Methods
     override func viewDidLoad() {
@@ -91,12 +98,13 @@ class WULiveCamGridViewController: UIViewController {
     }
     
     func prepareFilterArrayLiveCamList(searchText : String){
-        self.arrFilteredLiveCamList = self.arrLiveCamList.clone()
+       // self.arrFilteredLiveCamList = self.arrLiveCamList.clone()
+        self.arrFilteredLiveCamList = self.arrLiveCamList
         self.buttonGoToTop.isHidden = true
         self.buttonGoToTop.isSelected = false
         if searchText != ""{
-            let filteredLiveCam  = self.arrFilteredLiveCamList.filter { $0.Name.containsIgnoringCase(find: searchText)}
-            self.arrFilteredLiveCamList = filteredLiveCam
+//            let filteredLiveCam  = self.arrFilteredLiveCamList.filter { $0.Name.containsIgnoringCase(find: searchText)}
+//            self.arrFilteredLiveCamList = filteredLiveCam
         }
         self.manageNoResultLabel()
     }
@@ -109,8 +117,21 @@ class WULiveCamGridViewController: UIViewController {
         self.imageViewIcon.sd_imageIndicator = SDWebImageActivityIndicator.white
 //        self.imageViewIcon.sd_setIndicatorStyle(.white)
 //        self.imageViewIcon.sd_setShowActivityIndicatorView(true)
-        self.imageViewIcon.sd_setImage(with: URL(string: self.arrCollectionDataCopy[0].ImageURL), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
-        self.labelTitle.text = self.arrCollectionDataCopy[0].Name
+//        self.imageViewIcon.sd_setImage(with: URL(string: self.arrCollectionDataCopy[0]["url"] as! String), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
+        Utill.showProgressHud()
+        if let youtubeURL = self.arrCollectionDataCopy[0]["url"] as? String, youtubeURL != "" {
+            let fullNameArr = youtubeURL.split(separator: "=")
+            var youtubeId: String = String(fullNameArr[1])
+            print(youtubeId)
+            let thumbnilURl = "http://img.youtube.com/vi/\(youtubeId)/0.jpg"
+            print(thumbnilURl)
+//            if let streamOptions = self.liveCamVenue["url"] as? String {
+                self.imageViewIcon.sd_setImage(with: URL(string: thumbnilURl), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
+        //    }
+            Utill.hideProgressHud()
+        }
+    
+        self.labelTitle.text = self.arrCollectionDataCopy[0]["name"] as? String
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerDidSelect(_:)))
         self.tapGesture.numberOfTapsRequired = 1
         self.tableViewLiveCamGrid.tableHeaderView?.addGestureRecognizer(self.tapGesture)
@@ -137,7 +158,7 @@ class WULiveCamGridViewController: UIViewController {
     
     @objc func headerDidSelect(_ sender : UITapGestureRecognizer) {
         self.verticalContentOffset  = self.tableViewLiveCamGrid.contentOffset.y
-        Utill.goToLivecamProfile(viewController: self, withLivecamM:  self.arrFilteredLiveCamList[0])
+     //   Utill.goToLivecamProfile(viewController: self, withLivecamM:  self.arrFilteredLiveCamList[0])
     }
     
 }
@@ -155,7 +176,7 @@ extension WULiveCamGridViewController : UICollectionViewDelegate , UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.verticalContentOffset  = self.tableViewLiveCamGrid.contentOffset.y
-        Utill.goToLivecamProfile(viewController: self, withLivecamM: self.arrCollectionDataCopy[indexPath.row])
+      //  Utill.goToLivecamProfile(viewController: self, withLivecamM: self.arrCollectionDataCopy[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

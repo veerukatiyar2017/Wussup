@@ -27,6 +27,8 @@ class WUWelComeViewController: UIViewController{
     @IBOutlet private weak var buttonFacebook   : UIButton!
     @IBOutlet private weak var imageViewBeeGif  : UIImageView!
     
+    var db = Firestore.firestore()
+    
     //MARK: - Load Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,18 +91,12 @@ class WUWelComeViewController: UIViewController{
         }
     }
     
-    //MARK: - Button Actions
-    @IBAction func wussUpButtonAction(_ sender: Any) {
-        FirebaseManager.sharedInstance.login_ios(parameter: nil)
-        self.performSegue(withIdentifier: Text.Segue.welcomeToLogin, sender: nil)
-    }
     
-    @IBAction func facebookButtonAction(_ sender: Any) {
+    func callFirebaseAnonymouslyAuth() {
         
         Auth.auth().signInAnonymously { authResult, error in
             print(error)
             guard let user = authResult?.user else { return }
-           
             if let error = error as NSError? {
             switch AuthErrorCode(rawValue: error.code) {
             case .operationNotAllowed:
@@ -119,14 +115,89 @@ class WUWelComeViewController: UIViewController{
                 print("Error: \(error.localizedDescription)")
             }
             } else {
+            print("User signs up successfully")
                 let isAnonymous = user.isAnonymous  // true
                 let uid = user.uid
                 print(uid)
                 print(isAnonymous)
-                self.performSegue(withIdentifier: Text.Segue.signUpToSignUpConfirm, sender: nil)
-              //  self.performSegue(withIdentifier: Text.Segue.loginToHome, sender: nil)
-            }
+              // make uid as a key
+              var ref: DocumentReference? = nil
+              let docData: [String:Any] = [
+                "birthdate": "",
+                "birthday":"",
+                "categoriesPrefernces": "",
+                "city":"",
+                "dateCreated":"",
+                "dateModified":"",
+                "deviceToken":"",
+                "email":"",
+                "facebookID":"",
+                "favoriteCategories":[],
+                "favoriteLiveCamsnull":"",
+                "geopoint":[],
+                "id":"\(uid)",
+                "imageURL":"",
+                "isAllowedNotification":"",
+                "isBussinessPresent":false,
+                "mobile":"",
+                "postalCode":"",
+                "token":"",
+                "userName": "",
+                "userUID": ""
+            ]
+
+            self.db.collection("users")
+                  .document(uid)
+                  .setData(docData) { err in
+                  if let err = err {
+                      print("Error adding document: \(err)")
+                  } else {
+                      print("Document successfully written!")
+                  }
+              }
+              self.performSegue(withIdentifier: Text.Segue.signUpToSignUpConfirm, sender: nil)
+          }
         }
+    }
+    
+    //MARK: - Button Actions
+    @IBAction func wussUpButtonAction(_ sender: Any) {
+        FirebaseManager.sharedInstance.login_ios(parameter: nil)
+        self.performSegue(withIdentifier: Text.Segue.welcomeToLogin, sender: nil)
+    }
+    
+    @IBAction func facebookButtonAction(_ sender: Any) {
+        callFirebaseAnonymouslyAuth()
+//        Auth.auth().signInAnonymously { authResult, error in
+//            print(error)
+//            guard let user = authResult?.user else { return }
+//
+//            if let error = error as NSError? {
+//            switch AuthErrorCode(rawValue: error.code) {
+//            case .operationNotAllowed:
+//                print("Error: Indicates that email and password accounts are not enabled. Enable them in the Auth section of the Firebase console.")
+//              // Error: Indicates that email and password accounts are not enabled. Enable them in the Auth section of the Firebase console.
+//            case .userDisabled:
+//                print("Error: The user account has been disabled by an administrator.")
+//              // Error: The user account has been disabled by an administrator.
+//            case .wrongPassword:
+//                print("Error: The password is invalid or the user does not have a password.")
+//              // Error: The password is invalid or the user does not have a password.
+//            case .invalidEmail:
+//              // Error: Indicates the email address is malformed.
+//                print("Error: Indicates the email address is malformed.")
+//            default:
+//                print("Error: \(error.localizedDescription)")
+//            }
+//            } else {
+//                let isAnonymous = user.isAnonymous  // true
+//                let uid = user.uid
+//                print(uid)
+//                print(isAnonymous)
+//                self.performSegue(withIdentifier: Text.Segue.signUpToSignUpConfirm, sender: nil)
+//              //  self.performSegue(withIdentifier: Text.Segue.loginToHome, sender: nil)
+//            }
+//        }
         
 //        Auth.auth().signIn(withEmail: self.textFieldEmail.text!, password: self.textFieldPassword.text!) { [weak self] authResult, error in
 //          guard let strongSelf = self else { return }

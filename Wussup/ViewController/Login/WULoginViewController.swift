@@ -206,7 +206,7 @@ class WULoginViewController: UIViewController{
                       } else {
                           print(querySnapshot!.documentID)
                           print(querySnapshot!.data()!["mobile"]!)
-                          print((querySnapshot!.data()!["favoriteCategories"]! as AnyObject).count!)
+                          print((querySnapshot!.data()!["favoriteCategories"]! as AnyObject))
                           for document in querySnapshot!.data()! {
                               Utill.hideProgressHud()
                               print("\(document) => ")

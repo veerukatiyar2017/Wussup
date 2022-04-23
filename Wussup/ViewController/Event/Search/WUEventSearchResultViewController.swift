@@ -86,7 +86,7 @@ class WUEventSearchResultViewController: UIViewController {
 //        self.calendarView.appearance.caseOptions = .headerUsesUpperCase
         self.calendarView.headerHeight = 35.0
         self.calendarView.weekdayHeight = 30.0
-        self.calendarView.placeholderType = .fillHeadTail
+//        self.calendarView.placeholderType = .fillHeadTail
         self.calendarView.calendarHeaderView.backgroundColor = UIColor(hexString: "F4F4F4")
         self.calendarView.scope = .week
         self.calendarView.select(Date())

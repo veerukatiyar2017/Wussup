@@ -46,6 +46,7 @@ class WULiveCamProfileViewController: UIViewController,UIViewControllerTransitio
     
     var player                      : AVPlayer!
     var  liveCamVenue               : WUVenueLiveCams!
+//    var  liveCamVenue               : [String: Any]!
     private var currentVisibleImageIndex = 0
     private var timerAnimation      :Timer?
     var playerController    : AVPlayerViewController    = AVPlayerViewController()

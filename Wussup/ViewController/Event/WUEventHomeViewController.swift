@@ -111,7 +111,8 @@ class WUEventHomeViewController: UIViewController {
         {
             self.eventExpandVC.selectedCalenderDate = Date()
             self.eventListVC.selectedCalenderDate = Date()
-            self.callWS_getEventList(forDate: Date())
+           // self.callWS_getEventList(forDate: Date())
+            self.callWebServicesForEventsList()
         }
         else {
             self.callWS_getEventList(forDate: self.eventExpandVC.selectedCalenderDate)
@@ -135,7 +136,7 @@ class WUEventHomeViewController: UIViewController {
 //        self.calendarView.appearance.caseOptions = .headerUsesUpperCase
         self.calendarView.headerHeight = 35.0
         self.calendarView.weekdayHeight = 30.0
-        self.calendarView.placeholderType = .fillHeadTail
+    //    self.calendarView.placeholderType = .fillHeadTail
         self.calendarView.calendarHeaderView.backgroundColor = UIColor(hexString: "F4F4F4")
         self.calendarView.scope = .week
         self.calendarView.select(Date())
@@ -145,6 +146,10 @@ class WUEventHomeViewController: UIViewController {
     }
     
     // MARK: - Webservice calls
+    func callWebServicesForEventsList() {
+        
+    }
+    
      func callWS_getEventList(forDate date : Date){
         
         WEB_API.call_api_GetEventList(user: GlobalShared.user, categoryId: "0", date: date) { (response, success, message) in
@@ -155,6 +160,7 @@ class WUEventHomeViewController: UIViewController {
                 let data = try! JSONSerialization.data(withJSONObject: response?.dictionaryObject ?? [:], options: [])
                 self.eventListData = try! JSONDecoder().decode(EventListData.self, from: data)
 
+                
                 Utill.printInTOConsole(printData:"response: \(self.eventListData )")
 
                 Utill.saveHomeBannerModel(self.eventListData.LiveCamBanners)

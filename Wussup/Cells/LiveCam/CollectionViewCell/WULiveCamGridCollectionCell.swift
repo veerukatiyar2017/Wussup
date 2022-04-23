@@ -14,7 +14,12 @@ class WULiveCamGridCollectionCell: UICollectionViewCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var viewSeparator: UIView!
     
-    var  liveCamVenue: WUVenueLiveCams!{
+//    var  liveCamVenue: WUVenueLiveCams!{
+//        didSet{
+//            self.setCellDetail()
+//        }
+//    }
+    var  liveCamVenue: [String: Any]!{
         didSet{
             self.setCellDetail()
         }
@@ -39,7 +44,18 @@ class WULiveCamGridCollectionCell: UICollectionViewCell {
 //        self.imageViewIcon.sd_setIndicatorStyle(.white)
 //        self.imageViewIcon.sd_setShowActivityIndicatorView(true)
         
-        self.imageViewIcon.sd_setImage(with: URL(string: self.liveCamVenue.ImageURL), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
-        self.labelTitle.text = self.liveCamVenue.Name
+        if let youtubeURL = self.liveCamVenue["url"] as? String, youtubeURL != "" {
+            let fullNameArr = youtubeURL.split(separator: "=")
+            print(fullNameArr.count)
+            if fullNameArr.count > 1 {
+                var firstName: String = String(fullNameArr[0])
+                var youtubeId: String = String(fullNameArr[1])
+                print(youtubeId)
+                let thumbnilURl = "http://img.youtube.com/vi/\(youtubeId)/0.jpg"
+                self.imageViewIcon.sd_setImage(with: URL(string: thumbnilURl), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
+                print(thumbnilURl)
+            }
+        }
+        self.labelTitle.text = self.liveCamVenue["name"] as? String
     }
 }

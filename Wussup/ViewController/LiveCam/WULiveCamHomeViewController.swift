@@ -40,7 +40,8 @@ class WULiveCamHomeViewController: UIViewController {
     var LiveCamExpandVC     : WULiveCamExpandViewController!
     var LiveCamGridVC       : WULiveCamGridViewController!
     var LiveCamListVC       : WULiveCamListViewController!
-    var liveCamData         : [WUVenueLiveCams]   = []
+ //   var liveCamData         : [WUVenueLiveCams]   = []
+    var liveCamData                  = [[String: Any]]()
     var bannerData         : [WUHomeBannerList]   = []
     var db = Firestore.firestore()
     
@@ -120,11 +121,11 @@ class WULiveCamHomeViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     Utill.hideProgressHud()
                     print("\(document.documentID) => \(document.data())")
-                    let data = try! JSONSerialization.data(withJSONObject: document.data() , options: [])
-                    self.liveCamData = try! JSONDecoder().decode([WUVenueLiveCams].self, from: data)
-                    self.LiveCamExpandVC.arrLiveCamList = self.liveCamData
+                    self.liveCamData.append(document.data())
                 }
-
+                self.LiveCamExpandVC.arrLiveCamList = self.liveCamData
+                self.LiveCamGridVC.arrLiveCamList = self.liveCamData
+                self.LiveCamListVC.arrLiveCamList = self.liveCamData
             }
         }
     }
@@ -142,10 +143,10 @@ class WULiveCamHomeViewController: UIViewController {
                 Utill.saveHomeBannerModel(self.bannerData)
                 
                 let data = try! JSONSerialization.data(withJSONObject: response?["LiveCamsURLs"].arrayObject ?? [], options: [])
-                self.liveCamData = try! JSONDecoder().decode([WUVenueLiveCams].self, from: data)
-                self.LiveCamExpandVC.arrLiveCamList = self.liveCamData
-                self.LiveCamGridVC.arrLiveCamList = self.liveCamData
-                self.LiveCamListVC.arrLiveCamList = self.liveCamData
+//                self.liveCamData = try! JSONDecoder().decode([WUVenueLiveCams].self, from: data)
+//                self.LiveCamExpandVC.arrLiveCamList = self.liveCamData
+//                self.LiveCamGridVC.arrLiveCamList = self.liveCamData
+//                self.LiveCamListVC.arrLiveCamList = self.liveCamData
                 
             }else{
                 self.LiveCamExpandVC.arrLiveCamList = []

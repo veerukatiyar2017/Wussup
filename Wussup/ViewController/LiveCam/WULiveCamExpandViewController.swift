@@ -36,12 +36,18 @@ class WULiveCamExpandViewController: UIViewController {
     //MARK: - Variable
     var verticalContentOffset : CGFloat!
     weak var delegate : WULiveCamAnimationDelagate?
-    var arrFilteredLiveCamList : [WUVenueLiveCams] = []
-    var arrLiveCamList  : [WUVenueLiveCams] = [] {
-        didSet{
+   // var arrFilteredLiveCamList : [WUVenueLiveCams] = []
+    var arrFilteredLiveCamList              : [[String: Any]] = []
+    var arrLiveCamList              : [[String: Any]] = [] {
+        didSet {
             self.prepareFilterArrayLiveCamList(searchText: "")
         }
     }
+//    var arrLiveCamList  : [WUVenueLiveCams] = [] {
+//        didSet{
+//            self.prepareFilterArrayLiveCamList(searchText: "")
+//        }
+//    }
     
     //MARK: - Load Methods
     override func viewDidLoad() {
@@ -91,12 +97,13 @@ class WULiveCamExpandViewController: UIViewController {
     }
     
     func prepareFilterArrayLiveCamList(searchText : String){
-        self.arrFilteredLiveCamList = self.arrLiveCamList.clone()
+//        self.arrFilteredLiveCamList = self.arrLiveCamList.clone()
+        self.arrFilteredLiveCamList = self.arrLiveCamList
         self.buttonGoToTop.isHidden = true
         self.buttonGoToTop.isSelected = false
         if searchText != ""{
-            let filteredLiveCam  = self.arrFilteredLiveCamList.filter { $0.Name.containsIgnoringCase(find: searchText)}
-            self.arrFilteredLiveCamList = filteredLiveCam
+           // let filteredLiveCam  = self.arrFilteredLiveCamList.filter { $0.Name.containsIgnoringCase(find: searchText)}
+         //   self.arrFilteredLiveCamList = filteredLiveCam
         }
         self.manageNoResultLabel()
     }
@@ -142,10 +149,10 @@ extension WULiveCamExpandViewController : UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Utill.printInTOConsole(printData:"DAteRange Cell")
-        FirebaseManager.sharedInstance.play_livecam_GUID_ios(parameter: nil, playLiveCamM: self.arrFilteredLiveCamList[indexPath.row])
-        self.verticalContentOffset  = self.tableViewLiveCamExpand.contentOffset.y
-        Utill.goToLivecamProfile(viewController: self, withLivecamM: self.arrFilteredLiveCamList[indexPath.row])
+//        Utill.printInTOConsole(printData:"DAteRange Cell")
+//        FirebaseManager.sharedInstance.play_livecam_GUID_ios(parameter: nil, playLiveCamM: self.arrFilteredLiveCamList[indexPath.row])
+//        self.verticalContentOffset  = self.tableViewLiveCamExpand.contentOffset.y
+//        Utill.goToLivecamProfile(viewController: self, withLivecamM: self.arrFilteredLiveCamList[indexPath.row])
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

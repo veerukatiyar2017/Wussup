@@ -49,7 +49,8 @@ class WUVenueLiveCams: NSObject, Decodable,Copying{
     var WidthFloat          : CGFloat   = 0.0
     var GUID                : String    = ""
     var ID                  : String    = "0"
-    var created             : String    = ""
+    var created             : AnyObject?
+    var modified            : AnyObject?
     
     private enum CodingKeys: String, CodingKey {
         case LiveCamURL

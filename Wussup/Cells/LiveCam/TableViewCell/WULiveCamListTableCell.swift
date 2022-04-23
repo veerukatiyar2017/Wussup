@@ -21,11 +21,16 @@ class WULiveCamListTableCell: UITableViewCell {
     weak var delegate : WUFavoriteDateRangeTableCellDelegate?
     
     // MARK: - Variables
-    var  liveCamVenue: WUVenueLiveCams!{
+    var  liveCamVenue: [String : Any]!{
         didSet{
             self.setCellDetailForLiveCam()
         }
     }
+//    var  liveCamVenue: WUVenueLiveCams!{
+//        didSet{
+//            self.setCellDetailForLiveCam()
+//        }
+//    }
     
     //MARK: - Load Methods
     override func awakeFromNib() {
@@ -47,9 +52,21 @@ class WULiveCamListTableCell: UITableViewCell {
 //        self.imageViewIcon.sd_setIndicatorStyle(.white)
 //        self.imageViewIcon.sd_setShowActivityIndicatorView(true)
         self.imageViewIcon.sd_imageIndicator = SDWebImageActivityIndicator.white
-        
-        self.imageViewIcon.sd_setImage(with: URL(string: self.liveCamVenue.ImageURL), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
-        self.labelTitle.text = self.liveCamVenue.Name
-        self.labelSubTitleAddress.text = self.liveCamVenue.Description
+      
+                if let youtubeURL = self.liveCamVenue["url"] as? String, youtubeURL != "" {
+                    let fullNameArr = youtubeURL.split(separator: "=")
+                    var firstName: String = String(fullNameArr[0])
+                    var youtubeId: String = String(fullNameArr[1])
+                    print(youtubeId)
+                    let thumbnilURl = "http://img.youtube.com/vi/\(youtubeId)/0.jpg"
+                    print(thumbnilURl)
+        //            if let streamOptions = self.liveCamVenue["url"] as? String {
+                        self.imageViewIcon.sd_setImage(with: URL(string: thumbnilURl), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
+                //    }
+                    Utill.hideProgressHud()
+                }
+//        self.imageViewIcon.sd_setImage(with: URL(string: self.liveCamVenue.ImageURL), placeholderImage:#imageLiteral(resourceName: "placeholder") , options: .refreshCached)
+        self.labelTitle.text = self.liveCamVenue["name"] as? String
+     //   self.labelSubTitleAddress.text = self.liveCamVenue.Description
     }
 }
